@@ -12,18 +12,10 @@ To install the project and set it up for development:
 
 Clone the repository:
 
-bash
-Copy code
+
 git clone https://github.com/Z333Q/PC-S24-25-Testnet.git
 Navigate to the project directory:
 
-bash
-Copy code
-cd PC-S24-25-Testnet
-Install npm dependencies:
-
-bash
-Copy code
 npm install
 Usage
 Running the Frontend
