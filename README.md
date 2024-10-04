@@ -1,13 +1,13 @@
 
 # Puck.City - October 2024 MVP (Version 4)
 
-Welcome to the Puck.City project repository! This version of the project introduces major upgrades to the smart contracts, frontend, and cross-chain integrations, focusing on the latest in blockchain technology. 
+## Project Summary and User Case
 
-## Overview
+**Puck.City** is a decentralized platform that revolutionizes sports fan engagement through blockchain technology. The user case centers around allowing fans to represent their cities in competitive sports, participate in governance, and actively support their teams through a gamified and decentralized experience. By holding **CITY** and **PUCK** tokens, users can influence city treasury decisions, vote on team-related matters, and receive rewards based on their team's success in real-world events.
 
-**Puck.City** is a decentralized Web3 application that bridges sports fandom and blockchain technology. Our mission is to create an interactive experience where users can represent their cities, participate in governance, and engage in gamified team support—all powered by blockchain infrastructure.
+The project also introduces cutting-edge technologies like zkSync for scalable transactions and Chainlink CCIP for cross-chain interoperability. This ensures a seamless user experience where tokens can be transferred across multiple blockchains with low fees and high speed, enhancing the overall fan engagement.
 
-### Key Features in Version 4:
+## Key Features in Version 4:
 
 1. **zkSync Integration**
    - Migrated from Polygon zkEVM to zkSync for improved scalability and account abstraction.
