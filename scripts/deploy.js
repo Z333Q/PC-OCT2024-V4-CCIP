@@ -13,13 +13,13 @@ async function main() {
     // Deploy OracleManagement contract
     // Deploy TreasuryManagement contract
     const TreasuryManagement = await hre.ethers.getContractFactory("TreasuryManagement");
-    const treasuryManagement = await TreasuryManagement.deploy(oracleManagement.address, tokenManagement.address);
+    const treasuryManagement = await TreasuryManagement.deploy(zkSyncOracleManagement.address, tokenManagement.address);
     await treasuryManagement.deployed();
     console.log("TreasuryManagement deployed to:", treasuryManagement.address);
     
     const OracleManagement = await hre.ethers.getContractFactory("OracleManagement");
-    const oracle = await OracleManagement.deploy();
-    console.log("OracleManagement deployed at:", oracle.address);
+    const zkSyncOracle = await OracleManagement.deploy();
+    console.log("OracleManagement deployed at:", zkSyncOracle.address);
 
     // Deploy PriceCalculation contract
     const PriceCalculation = await hre.ethers.getContractFactory("PriceCalculation");
@@ -28,8 +28,8 @@ async function main() {
 
     // Deploy BridgeOperations contract
     const BridgeOperations = await hre.ethers.getContractFactory("BridgeOperations");
-    const bridgeOperations = await BridgeOperations.deploy(accessControl.address);
-    console.log("BridgeOperations deployed at:", bridgeOperations.address);
+    const zkSync zkSyncBridgeOperations = await BridgeOperations.deploy(accessControl.address);
+    console.log("BridgeOperations deployed at:", zkSync zkSyncBridgeOperations.address);
 
     // Deploy TokenManagement contract
     const TokenManagement = await hre.ethers.getContractFactory("TokenManagement");
@@ -45,10 +45,10 @@ async function main() {
     const PuckCity = await hre.ethers.getContractFactory("PuckCity");
     const puckCity = await PuckCity.deploy(
         treasuryManagement.address,
-        oracle.address,
+        zkSyncOracle.address,
         accessControl.address,
         priceCalculation.address,
-        bridgeOperations.address,
+        zkSync zkSyncBridgeOperations.address,
         tokenManagement.address,
         gameManagement.address
     );

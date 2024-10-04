@@ -40,8 +40,8 @@ export const getLeaderboard = async () => {
   }
 };
 
-// Function to estimate gas fees for cross-chain transactions
-export const estimateGasFees = async (transactionData) => {
+// Function to estimate gas fees for zkSync L2 transactions
+export const zkSyncEstimateFees = async (transactionData) => {
   try {
     const contract = getContract();
     const gasEstimate = await contract.estimateGas(transactionData);
@@ -51,13 +51,13 @@ export const estimateGasFees = async (transactionData) => {
   }
 };
 
-// Function to handle cross-chain transaction status
-export const getCrossChainStatus = async (transactionHash) => {
+// Function to handle zkSync L2 transaction status
+export const zkSyncCrossChainStatus = async (transactionHash) => {
   try {
     const contract = getContract();
-    const status = await contract.getCrossChainStatus(transactionHash);
+    const status = await contract.zkSyncCrossChainStatus(transactionHash);
     return status;
   } catch (error) {
-    throw new Error('Error fetching cross-chain status: ' + error.message);
+    throw new Error('Error fetching zkSync L2 status: ' + error.message);
   }
 };
